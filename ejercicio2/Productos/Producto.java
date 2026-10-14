@@ -20,21 +20,31 @@ public class Producto {
         this.precio = precio;
     }
 
-    public boolean getpermisoVip(){
+    public boolean getPermisoVip(){
         return permisoVip;
     }
+    
     public void setPermisoVip(boolean permisoVip){
         this.permisoVip=permisoVip;
     }
     
-    public boolean permisoRegular(){
+    public boolean getPermisoRegular(){
         return permisoRegular;
     }
 
-    
-    
-    
+    public void setPermisoRegular(boolean permisoRegular) {
+        this.permisoRegular = permisoRegular;
+    }
 
+    public boolean getPermisoEstudiante(){
+        return permisoEstudiante;
+    }
+    public void setPermisoEstudiante(boolean permisoEstudiante) {
+        this.permisoEstudiante = permisoEstudiante;
+    }
 
-
+    public void imprimirse() {
+        System.out.println("    Articulo: " + "Producto");
+        System.out.println("    Precio: " + precio);
+    }
 }
