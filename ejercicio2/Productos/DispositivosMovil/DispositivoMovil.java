@@ -39,9 +39,13 @@ public class DispositivoMovil extends Producto {
         this.almacenamientoGB = almacenamientoGB;
     }
 
-    @Override 
-    public void imprimirse(){
-        System.out.println("");
+    protected  void imprimirInformacionDispoMovil(){
+        System.out.println("    Marca: "+getMarca());
+        System.out.println("    Modelo: "+getModelo());
+        System.out.println("    Almacenamiento: "+getAlmacenamientoGB());
+        System.out.println("    Tiene permiso Vip? "+getPermisoVip());
+        System.out.println("    Tiene permiso Regular? "+getPermisoRegular());
+        System.out.println("    Tiene permiso Estudiante? "+getPermisoEstudiante());
     }
 
 

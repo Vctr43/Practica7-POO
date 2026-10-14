@@ -46,10 +46,13 @@ public class Computadora extends Producto {
         this.sistemaOperativo = sistemaOperativo;
     }
 
-    @Override
-    
-
-
+    protected  void imprirInformacionCompu(){
+        System.out.println("    Precio: "+getPrecio());
+        System.out.println("    Marca: "+getMarca());
+        System.out.println("    Memoria Ram (GB): "+getMemoriaRamGB());
+        System.out.println("    Almacenamiento(GB):" +getAlmacenamientoGB());
+        System.out.println("    Sistema Operativo: "+getSistemaOperativo());
+        }
 
 
 

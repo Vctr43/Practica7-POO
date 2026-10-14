@@ -10,7 +10,7 @@ public class Smartphone extends DispositivoMovil {
         this.numCamara = numCamara;
     }
 
-    public short getCamaraMP() {
+    public short getNumCamaras() {
         return numCamara;
     }
 
@@ -26,5 +26,20 @@ public class Smartphone extends DispositivoMovil {
         this.tamaioPantallaInch = tamaioPantallaInch;
     }
     
+    @Override 
+    public void imprimirse(){
+        System.out.println("    Producto: Smartphone");
+        System.out.println("    Precio: "+getPrecio());
+    }
+
+    public void imprimirInformacion(){
+        System.out.println("    Producto: Smartphone");
+        imprimirInformacionDispoMovil();
+        System.out.println("    Número de Camaras: "+getNumCamaras());
+        System.out.println("    Tamaño de la Pantalla(Inch): "+getTamaioPantallaInch());
+    }
+
+
+
     
 }

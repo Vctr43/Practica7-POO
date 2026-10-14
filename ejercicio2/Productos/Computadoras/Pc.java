@@ -26,5 +26,16 @@ public class Pc extends Computadora {
     public void setMouse(boolean mouse) {
         this.mouse = mouse;
     }
-    
+    @Override 
+    public void imprimirse(){
+        System.out.println("    Producto: PC");
+        System.out.println("    Precio: "+getPrecio());
+    }
+
+    public void imprirInformacion(){
+        System.out.println("    Producto: PC");
+        imprirInformacionCompu();
+        System.out.println("    Tiene teclado incluido? "+getTeclado());
+        System.out.println("    Tiene mouse incluido? "+ getMouse());
+    }
 }
