@@ -35,12 +35,12 @@ public class Cliente {
         if(id < 0 || id >= productos.size())
             System.out.println("Indice invalido");
 
-        if(getClass() == ClienteEstudiante.class && productos.get(id).getPermisoEstudiante())
+        if((getClass() == ClienteEstudiante.class && productos.get(id).getPermisoEstudiante()) || (getClass() == ClienteRegular.class && productos.get(id).getPermisoRegular()) || (getClass() == ClienteVIP.class && productos.get(id).getPermisoVip())) {
             carrito.add(productos.remove(id));
-        else if(getClass() == ClienteRegular.class && productos.get(id).getPermisoRegular())
-            carrito.add(productos.remove(id));
-        else if(getClass() == ClienteVIP.class && productos.get(id).getPermisoVip())
-            carrito.add(productos.remove(id));
+            System.out.println("Producto agregado al carrito");
+        }
+        else
+            System.out.println("No tienes permiso para comprar este producto");
     }
 
     public LinkedList<Producto> getCarrito() {

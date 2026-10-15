@@ -64,7 +64,8 @@ public class Principal {
         creandoProductos(cliente);
 
         int opcion = -1;
-        while(opcion != 5) {
+        while(opcion != 6) {
+            System.out.println("--------------------");
             System.out.println("Seleccione una opción:");
             System.out.println("1. Mostrar productos disponibles");
             System.out.println("2. Mostrar información de un producto");

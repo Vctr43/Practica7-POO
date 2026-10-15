@@ -7,8 +7,8 @@ public class ClienteRegular extends Cliente{
     @Override 
     public void imprimirProductos() {
         int i = 0;
-        for (Producto producto : getCarrito()) {
-            System.out.println("Articulo " + i++ + (producto.getPermisoRegular() ? "" : "NO DISPONIBLE"));
+        for (Producto producto : getProductos()) {
+            System.out.println("Articulo " + i++ + (producto.getPermisoRegular() ? "" : " NO DISPONIBLE"));
             producto.imprimirse();
             
             if (producto.getDescuentoGeneral() != 0)
@@ -21,7 +21,7 @@ public class ClienteRegular extends Cliente{
         int i = 0;
         int total = 0;
         for (Producto producto : getCarrito()) {
-            System.out.println("Articulo " + i++ + (producto.getPermisoRegular() ? "" : "NO DISPONIBLE"));
+            System.out.println("Articulo " + i++ + (producto.getPermisoRegular() ? "" : " NO DISPONIBLE"));
             producto.imprimirse();
             
             if (producto.getDescuentoGeneral() != 0)

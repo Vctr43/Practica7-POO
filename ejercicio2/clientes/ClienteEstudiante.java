@@ -6,8 +6,8 @@ public class ClienteEstudiante extends Cliente {
     @Override 
     public void imprimirProductos() {
         int i = 0;
-        for (Producto producto : getCarrito()) {
-            System.out.println("Articulo " + i++ + (producto.getPermisoEstudiante() ? "" : "NO DISPONIBLE"));
+        for (Producto producto : getProductos()) {
+            System.out.println("Articulo " + i++ + (producto.getPermisoEstudiante() ? "" : " NO DISPONIBLE"));
             producto.imprimirse();
 
             if (producto.getDescuentoEstudiante() != 0)
@@ -20,7 +20,7 @@ public class ClienteEstudiante extends Cliente {
         int i = 0;
         int total = 0;
         for (Producto producto : getCarrito()) {
-            System.out.println("Articulo " + i++ + (producto.getPermisoEstudiante() ? "" : "NO DISPONIBLE"));
+            System.out.println("Articulo " + i++ + (producto.getPermisoEstudiante() ? "" : " NO DISPONIBLE"));
             producto.imprimirse();
 
             if (producto.getDescuentoEstudiante() != 0)
