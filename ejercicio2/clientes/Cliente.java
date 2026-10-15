@@ -8,7 +8,16 @@ public class Cliente {
     private ArrayList<Producto> productos = new ArrayList<>();
     private LinkedList<Producto> carrito = new LinkedList<>();
 
-    public void imprimirCarrito() {
+
+    public void imprimirProductos() {
+        int i = 1;
+        for (Producto producto : productos) {
+            System.out.println("Articulo " + i++);
+            producto.imprimirse();
+        }
+    }
+
+    public int imprimirCarrito() {
         int i = 1;
         int total = 0;
         for (Producto producto : carrito) {
@@ -18,10 +27,27 @@ public class Cliente {
         }
         System.out.println("El total en el carrito es: ");
         System.out.println("    $" + total);
+
+        return total;
     }
 
-    public void ingresarEnCarrito(int seccion, int id) {
-        Producto producto = productos.get(id);
-        carrito.add(producto);
+    public void ingresarEnCarrito(int id) {
+        if(id < 0 || id >= productos.size())
+            System.out.println("Indice invalido");
+
+        if(getClass() == ClienteEstudiante.class && productos.get(id).getPermisoEstudiante())
+            carrito.add(productos.remove(id));
+        else if(getClass() == ClienteRegular.class && productos.get(id).getPermisoRegular())
+            carrito.add(productos.remove(id));
+        else if(getClass() == ClienteVIP.class && productos.get(id).getPermisoVip())
+            carrito.add(productos.remove(id));
+    }
+
+    public LinkedList<Producto> getCarrito() {
+        return carrito;
+    }
+
+    public ArrayList<Producto> getProductos() {
+        return productos;
     }
 }
