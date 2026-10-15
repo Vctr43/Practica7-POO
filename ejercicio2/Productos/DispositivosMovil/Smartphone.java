@@ -32,9 +32,10 @@ public class Smartphone extends DispositivoMovil {
         System.out.println("    Precio: "+getPrecio());
     }
 
+    @Override
     public void imprimirInformacion(){
         System.out.println("    Producto: Smartphone");
-        imprimirInformacionDispoMovil();
+        super.imprimirInformacion();
         System.out.println("    Número de Camaras: "+getNumCamaras());
         System.out.println("    Tamaño de la Pantalla(Inch): "+getTamaioPantallaInch());
     }

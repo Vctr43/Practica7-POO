@@ -10,7 +10,7 @@ public class Cliente {
 
 
     public void imprimirProductos() {
-        int i = 1;
+        int i = 0;
         for (Producto producto : productos) {
             System.out.println("Articulo " + i++);
             producto.imprimirse();
@@ -18,7 +18,7 @@ public class Cliente {
     }
 
     public int imprimirCarrito() {
-        int i = 1;
+        int i = 0;
         int total = 0;
         for (Producto producto : carrito) {
             System.out.println("Articulo " + i++);
@@ -49,5 +49,22 @@ public class Cliente {
 
     public ArrayList<Producto> getProductos() {
         return productos;
+    }
+
+    public void comprar() {
+        int total = imprimirCarrito();
+        System.out.println("El total a pagar es: ");
+        System.out.println("    $" + total);
+        System.out.println("Gracias por su compra.");
+        carrito.clear();
+    }
+
+    public void imprimirProductoCompleto(int id) {
+        if (id < 0 || id >= productos.size()) {
+            System.out.println("Índice inválido");
+            return;
+        }
+        
+        productos.get(id).imprimirInformacion();
     }
 }

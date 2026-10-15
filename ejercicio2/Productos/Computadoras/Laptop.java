@@ -32,14 +32,11 @@ public class Laptop extends Computadora {
         System.out.println("    Precio: "+getPrecio());
     }
 
-    public void imprirInformacion(){
+    @Override 
+    public void imprimirInformacion(){
         System.out.println("    Producto: Laptop");
-        imprirInformacionCompu();
+        super.imprimirInformacion();
         System.out.println("    Peso (KG): "+getPesoKg());
         System.out.println("    Duración de bateria (Horas): "+ getDuracionBateriaHoras());
     }
-
-
-
-
 }

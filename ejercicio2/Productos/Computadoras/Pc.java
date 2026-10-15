@@ -32,9 +32,10 @@ public class Pc extends Computadora {
         System.out.println("    Precio: "+getPrecio());
     }
 
-    public void imprirInformacion(){
+    @Override
+    public void imprimirInformacion(){
         System.out.println("    Producto: PC");
-        imprirInformacionCompu();
+        super.imprimirInformacion();
         System.out.println("    Tiene teclado incluido? "+getTeclado());
         System.out.println("    Tiene mouse incluido? "+ getMouse());
     }

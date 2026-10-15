@@ -6,7 +6,7 @@ public class ClienteRegular extends Cliente{
 
     @Override 
     public void imprimirProductos() {
-        int i = 1;
+        int i = 0;
         for (Producto producto : getCarrito()) {
             System.out.println("Articulo " + i++ + (producto.getPermisoRegular() ? "" : "NO DISPONIBLE"));
             producto.imprimirse();
@@ -18,7 +18,7 @@ public class ClienteRegular extends Cliente{
 
     @Override 
     public int imprimirCarrito() {
-        int i = 1;
+        int i = 0;
         int total = 0;
         for (Producto producto : getCarrito()) {
             System.out.println("Articulo " + i++ + (producto.getPermisoRegular() ? "" : "NO DISPONIBLE"));

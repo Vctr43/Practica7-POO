@@ -33,7 +33,7 @@ public class Tablet extends DispositivoMovil{
 
     public void imprimirInformacion(){
         System.out.println("    Producto: Tablet");
-        imprimirInformacionDispoMovil();
+        super.imprimirInformacion();
         System.out.println("    Tamaño de la Pantalla(Inch): "+getTamanioPantallaInch());
         System.out.println("    Incluye Lapiz? "+getlapiz());
     }

@@ -5,7 +5,7 @@ import Productos.*;
 public class ClienteEstudiante extends Cliente {
     @Override 
     public void imprimirProductos() {
-        int i = 1;
+        int i = 0;
         for (Producto producto : getCarrito()) {
             System.out.println("Articulo " + i++ + (producto.getPermisoEstudiante() ? "" : "NO DISPONIBLE"));
             producto.imprimirse();
@@ -17,7 +17,7 @@ public class ClienteEstudiante extends Cliente {
 
     @Override 
     public int imprimirCarrito() {
-        int i = 1;
+        int i = 0;
         int total = 0;
         for (Producto producto : getCarrito()) {
             System.out.println("Articulo " + i++ + (producto.getPermisoEstudiante() ? "" : "NO DISPONIBLE"));

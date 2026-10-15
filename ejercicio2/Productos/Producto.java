@@ -65,4 +65,8 @@ public class Producto {
         System.out.println("    Articulo: " + "Producto");
         System.out.println("    Precio: " + precio);
     }
+
+    public  void imprimirInformacion() {
+        System.out.println("    Precio: " + precio);
+    }
 }

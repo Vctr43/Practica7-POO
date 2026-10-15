@@ -1,4 +1,5 @@
 package Productos.Computadoras;
+
 import Productos.Producto;
 
 public class Computadora extends Producto {
@@ -46,7 +47,8 @@ public class Computadora extends Producto {
         this.sistemaOperativo = sistemaOperativo;
     }
 
-    protected  void imprirInformacionCompu(){
+    @Override 
+    public void imprimirInformacion(){
         System.out.println("    Precio: "+getPrecio());
         System.out.println("    Marca: "+getMarca());
         System.out.println("    Memoria Ram (GB): "+getMemoriaRamGB());
